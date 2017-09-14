@@ -1,0 +1,14 @@
+---
+# tasks file for Git
+#
+ - name: Install Git in Ubuntu 16 && Ubuntu 14
+   apt:
+     pkg: git
+     state: present 
+   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+ - name: Install Git in Centos all versions
+   yum:
+     name: git
+     state: present
+   when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
