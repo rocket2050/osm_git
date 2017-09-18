@@ -1,5 +1,5 @@
 ---
 
-- hosts: centos
+- hosts: ubuntu,centos
   roles: 
       - Git
